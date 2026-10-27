@@ -1,0 +1,43 @@
+/* Menu Page Styles */
+.menu-container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.menu-category {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.menu-category h3 {
+  margin-top: 0;
+  color: #2c3e50;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 8px;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px dashed #cbd5e1;
+}
+
+.menu-list li:last-child {
+  border-bottom: none;
+}
+
+.price {
+  font-weight: bold;
+  color: #16a34a;
+}
