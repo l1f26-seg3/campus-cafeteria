@@ -975,3 +975,177 @@ a:focus-visible {
         transition-duration: 0.01ms !important;
     }
 }
+
+
+/* =========================================
+   11. Feedback & Contact Form
+   ========================================= */
+
+main {
+    min-height: 75vh;
+    padding: 75px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background:
+        radial-gradient(ellipse at 90% 10%, #f3e9d9 0, transparent 38%),
+        var(--cream);
+}
+
+/* Page Header */
+
+body > header {
+    padding: 28px 20px;
+    text-align: center;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+
+body > header h1 {
+    color: var(--dark);
+    font-size: clamp(25px, 4vw, 36px);
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+/* Form Section */
+
+main section {
+    width: 100%;
+    max-width: 620px;
+    padding: 40px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--white);
+    box-shadow: 0 18px 45px #292c2110;
+}
+
+/* Form Heading */
+
+main section h2 {
+    margin-bottom: 30px;
+    color: var(--dark);
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
+main section h2::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 4px;
+    margin: 12px auto 0;
+    border-radius: 10px;
+    background: var(--primary);
+}
+
+/* Form Fields */
+
+form > div {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: var(--dark);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    outline: none;
+    background: var(--cream);
+    color: var(--dark);
+    font-family: inherit;
+    font-size: 14px;
+    transition: 0.25s ease;
+}
+
+form input {
+    min-height: 48px;
+}
+
+form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+/* Input Focus Effect */
+
+form input:focus,
+form textarea:focus {
+    border-color: var(--primary);
+    background: var(--white);
+    box-shadow: 0 0 0 3px #e85d3220;
+}
+
+/* Submit Button */
+
+form button {
+    width: 100%;
+    min-height: 50px;
+    margin-top: 5px;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 10px;
+    background: var(--primary);
+    color: var(--white);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+form button:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px #e85d3230;
+}
+
+form button:active {
+    transform: translateY(0);
+}
+
+form button:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 4px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+    main {
+        padding: 45px 16px;
+    }
+
+    main section {
+        padding: 28px 20px;
+    }
+
+    main section h2 {
+        font-size: 25px;
+    }
+
+    body > header h1 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 380px) {
+    main section {
+        padding: 23px 16px;
+    }
+
+    main section h2 {
+        font-size: 22px;
+    }
+}
