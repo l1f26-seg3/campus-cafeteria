@@ -3,34 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback & Contact - Campus Cafeteria</title>
+    <title>Feedback &amp; Contact - Campus Bites</title>
     <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
-    <header>
-        <h1>Campus Cafeteria - Feedback & Contact</h1>
+
+    <!-- Header & Navigation (Matches Index Theme) -->
+    <header class="site-header">
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">CB</span>
+                Campus<span class="logo-accent">Bites</span>
+            </a>
+
+            <nav aria-label="Main Navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="deals.html">Deals</a></li>
+                    <li><a href="order.html">Order</a></li>
+                    <li><a href="feedback.html" class="active">Feedback</a></li>
+                </ul>
+            </nav>
+
+            <a href="order.html" class="nav-cta">
+                Order Now <span>&rarr;</span>
+            </a>
+        </div>
     </header>
 
-    <main>
-        <section>
-            <h2>We'd Love Your Feedback!</h2>
-            <form action="#" method="POST">
-                <div>
-                    <label for="name">Your Name:</label><br>
-                    <input type="text" id="name" name="name" required>
+    <!-- Main Feedback Form Section -->
+    <main class="feedback-main">
+        <section class="feedback-card">
+            <div class="feedback-intro">
+                <span class="eyebrow">
+                    <span class="status-dot"></span> CAMPUS CAFETERIA
+                </span>
+                <h1>We'd Love Your Feedback!</h1>
+                <p>
+                    Have a question, suggestion, or comment about your meal? Fill out the form below and help us make your campus dining experience even better.
+                </p>
+            </div>
+
+            <form class="feedback-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
                 </div>
                 
-                <div>
-                    <label for="email">Your Email:</label><br>
-                    <input type="email" id="email" name="email" required>
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
                 </div>
-                <div>
-                    <label for="message">Your Message / Feedback:</label><br>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                <div class="form-group">
+                    <label for="message">Your Message / Feedback:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your feedback or message here..." required></textarea>
                 </div>
+
                 <button type="submit">Submit Feedback</button>
             </form>
         </section>
     </main>
+
+    <!-- Footer (Matches Index Theme) -->
+    <footer class="site-footer">
+        <div class="container footer-main">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">CB</span>
+                    Campus<span class="logo-accent">Bites</span>
+                </a>
+                <p>
+                    Freshly prepared comfort food, student-friendly deals, and quick pickups right on campus.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="deals.html">Deals</a>
+                <a href="order.html">Order</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Support</h3>
+                <a href="feedback.html">Feedback &amp; Contact</a>
+                <a href="order.html">Track Order</a>
+                <a href="deals.html">Student Offers</a>
+            </div>
+
+            <div class="footer-hours">
+                <h3>Opening Hours</h3>
+                <p>Mon - Fri: 8:00 AM - 10:00 PM</p>
+                <p>Saturday: 10:00 AM - 9:00 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 <span>Campus Bites</span>. All rights reserved.</p>
+            <p>Made with <span>&hearts;</span> for students.</p>
+        </div>
+    </footer>
+
 </body>
 </html>

@@ -975,15 +975,14 @@ a:focus-visible {
         transition-duration: 0.01ms !important;
     }
 }
-
-
 /* =========================================
    11. Feedback & Contact Form
+   (class-based, so nothing here can affect other pages)
    ========================================= */
 
-main {
-    min-height: 75vh;
-    padding: 75px 20px;
+.feedback-main {
+    min-height: 70vh;
+    padding: 75px 20px 90px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -992,25 +991,7 @@ main {
         var(--cream);
 }
 
-/* Page Header */
-
-body > header {
-    padding: 28px 20px;
-    text-align: center;
-    background: var(--white);
-    border-bottom: 1px solid var(--border);
-}
-
-body > header h1 {
-    color: var(--dark);
-    font-size: clamp(25px, 4vw, 36px);
-    font-weight: 800;
-    letter-spacing: -1px;
-}
-
-/* Form Section */
-
-main section {
+.feedback-card {
     width: 100%;
     max-width: 620px;
     padding: 40px;
@@ -1020,43 +1001,58 @@ main section {
     box-shadow: 0 18px 45px #292c2110;
 }
 
-/* Form Heading */
-
-main section h2 {
+.feedback-intro {
     margin-bottom: 30px;
-    color: var(--dark);
-    font-size: 30px;
-    font-weight: 800;
-    letter-spacing: -1px;
     text-align: center;
 }
 
-main section h2::after {
+.feedback-intro h1 {
+    margin-top: 12px;
+    color: var(--dark);
+    font-size: clamp(28px, 4vw, 36px);
+    font-weight: 800;
+    letter-spacing: -1.2px;
+    line-height: 1.2;
+}
+
+.feedback-intro h1 span {
+    color: var(--primary);
+}
+
+.feedback-intro h1::after {
     content: "";
     display: block;
     width: 55px;
     height: 4px;
-    margin: 12px auto 0;
+    margin: 14px auto 0;
     border-radius: 10px;
     background: var(--primary);
 }
 
-/* Form Fields */
+.feedback-intro p {
+    margin-top: 16px;
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.8;
+}
 
-form > div {
+/* Form fields */
+
+.feedback-form .form-group {
     margin-bottom: 20px;
 }
 
-form label {
-    display: inline-block;
+.feedback-form label {
+    display: block;
     margin-bottom: 8px;
     color: var(--dark);
     font-size: 13px;
     font-weight: 700;
 }
 
-form input,
-form textarea {
+.feedback-form input,
+.feedback-form select,
+.feedback-form textarea {
     width: 100%;
     padding: 13px 15px;
     border: 1px solid var(--border);
@@ -1069,27 +1065,32 @@ form textarea {
     transition: 0.25s ease;
 }
 
-form input {
+.feedback-form input,
+.feedback-form select {
     min-height: 48px;
 }
 
-form textarea {
+.feedback-form textarea {
     min-height: 140px;
     resize: vertical;
 }
 
-/* Input Focus Effect */
+.feedback-form input::placeholder,
+.feedback-form textarea::placeholder {
+    color: var(--muted);
+}
 
-form input:focus,
-form textarea:focus {
+.feedback-form input:focus,
+.feedback-form select:focus,
+.feedback-form textarea:focus {
     border-color: var(--primary);
     background: var(--white);
     box-shadow: 0 0 0 3px #e85d3220;
 }
 
-/* Submit Button */
+/* Submit button */
 
-form button {
+.feedback-form button {
     width: 100%;
     min-height: 50px;
     margin-top: 5px;
@@ -1105,47 +1106,35 @@ form button {
     transition: 0.25s ease;
 }
 
-form button:hover {
+.feedback-form button:hover {
     background: var(--primary-dark);
     transform: translateY(-3px);
     box-shadow: 0 8px 20px #e85d3230;
 }
 
-form button:active {
+.feedback-form button:active {
     transform: translateY(0);
 }
 
-form button:focus-visible {
+.feedback-form button:focus-visible {
     outline: 3px solid var(--primary);
     outline-offset: 4px;
 }
 
-/* Responsive Design */
+/* Responsive */
 
 @media (max-width: 600px) {
-    main {
-        padding: 45px 16px;
+    .feedback-main {
+        padding: 45px 16px 60px;
     }
 
-    main section {
+    .feedback-card {
         padding: 28px 20px;
-    }
-
-    main section h2 {
-        font-size: 25px;
-    }
-
-    body > header h1 {
-        font-size: 24px;
     }
 }
 
 @media (max-width: 380px) {
-    main section {
+    .feedback-card {
         padding: 23px 16px;
-    }
-
-    main section h2 {
-        font-size: 22px;
     }
 }
